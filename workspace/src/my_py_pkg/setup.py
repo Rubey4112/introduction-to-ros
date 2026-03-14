@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            "minimal_publisher = my_py_pkg.minimal_publisher:main",
+            "minimal_subscriber = my_py_pkg.minimal_subscriber:main",
         ],
     },
 )
