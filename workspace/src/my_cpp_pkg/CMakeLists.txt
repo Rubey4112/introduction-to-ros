@@ -26,7 +26,14 @@ endif()
 add_executable(minimal_publisher src/minimal_publisher.cpp)
 ament_target_dependencies(minimal_publisher rclcpp example_interfaces) # add dependencies to linker
 
+
+add_executable(minimal_subscriber src/minimal_subscriber.cpp)
+ament_target_dependencies(minimal_subscriber rclcpp example_interfaces)
+
 # Install the binaries to specific folder
-install(TARGETS minimal_publisher DESTINATION lib/${PROJECT_NAME})
+install(TARGETS 
+  minimal_publisher
+  minimal_subscriber
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
