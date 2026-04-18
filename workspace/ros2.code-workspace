@@ -39,7 +39,7 @@
             "ament_cmake_DIR": "/opt/ros/jazzy/share/ament_cmake/cmake"
         },
         "cmake.ignoreCMakeListsMissing": true,
-        "workbench.colorTheme": "Dark Modern",
+        "workbench.colorTheme": "Dark 2026",
         "ros.distro": "jazzy",
         "ros.workspaceFolder": "/config/workspace",
         "files.associations": {
