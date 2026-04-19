@@ -1,14 +1,14 @@
 {
     "folders": [
-		{
-			"name": "/config/workspace",
-			"path": "/config/workspace"
-		},
-		{
-			"name": "/opt/ros/jazzy",
-			"path": "/opt/ros/jazzy"
-		}
-	],
+        {
+            "name": "/config/workspace",
+            "path": "."
+        },
+        {
+            "name": "/opt/ros/jazzy",
+            "path": "../../opt/ros/jazzy"
+        }
+    ],
     "settings": {
         "editor.tabSize": 4,
         "editor.insertSpaces": true,
