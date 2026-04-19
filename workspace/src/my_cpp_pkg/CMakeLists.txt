@@ -33,11 +33,15 @@ ament_target_dependencies(minimal_subscriber rclcpp example_interfaces)
 add_executable(minimal_server src/minimal_server.cpp)
 ament_target_dependencies(minimal_server rclcpp example_interfaces)
 
+add_executable(minimal_client src/minimal_client.cpp)
+ament_target_dependencies(minimal_client rclcpp example_interfaces)
+
 # Install the binaries to specific folder
 install(TARGETS 
   minimal_publisher
   minimal_subscriber
   minimal_server
+  minimal_client
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

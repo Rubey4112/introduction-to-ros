@@ -15,12 +15,12 @@ public:
     }
 
 private:
+
     rclcpp::Service<example_interfaces::srv::AddTwoInts>::SharedPtr server_;
 
     void server_callback(
         const example_interfaces::srv::AddTwoInts::Request::SharedPtr req,
-        const example_interfaces::srv::AddTwoInts::Response::SharedPtr resp,
-    )
+        const example_interfaces::srv::AddTwoInts::Response::SharedPtr resp)
     {
         resp->sum = req->a + req->b;
         
