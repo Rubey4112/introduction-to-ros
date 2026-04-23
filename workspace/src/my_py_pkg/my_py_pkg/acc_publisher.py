@@ -7,7 +7,7 @@ class AccPublisher(Node):
     """ Publisher example that periodically sends out dummy accelerometer data """
 
     def __init__(self):
-        super().__init__("minimal_publisher")
+        super().__init__("acc_publisher")
 
         self._publisher = self.create_publisher(Accelerometer, "my_acc", 10)
         self._timer = self.create_timer(0.5, self._timer_callback)
@@ -23,7 +23,7 @@ class AccPublisher(Node):
         msg.z = -9.81
 
         self._publisher.publish(msg)
-        self.get_logger().info(f"Publishing: ({msg.x} {msg.y} {msg.z})")
+        self.get_logger().info(f"Publishing: x={msg.x}, y={msg.y}, z={msg.z}")
 
         self._counter += 1
 

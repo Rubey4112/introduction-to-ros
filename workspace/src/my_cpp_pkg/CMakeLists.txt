@@ -9,6 +9,8 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(example_interfaces REQUIRED)
+find_package(my_interfaces REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -36,12 +38,24 @@ ament_target_dependencies(minimal_server rclcpp example_interfaces)
 add_executable(minimal_client src/minimal_client.cpp)
 ament_target_dependencies(minimal_client rclcpp example_interfaces)
 
+add_executable(acc_publisher src/acc_publisher.cpp)
+ament_target_dependencies(acc_publisher rclcpp my_interfaces)
+
+add_executable(acc_subscriber src/acc_subscriber.cpp)
+ament_target_dependencies(acc_subscriber rclcpp my_interfaces)
+
+add_executable(trigger_points_client src/trigger_points_client.cpp)
+ament_target_dependencies(trigger_points_client rclcpp my_interfaces geometry_msgs)
+
 # Install the binaries to specific folder
 install(TARGETS 
   minimal_publisher
   minimal_subscriber
   minimal_server
   minimal_client
+  acc_publisher
+  acc_subscriber
+  trigger_points_client
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
