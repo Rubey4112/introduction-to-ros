@@ -13,7 +13,7 @@ class PublisherWithParams(Node):
         self.declare_parameter("timer_period", 1.0)
 
         self._message = self.get_parameter("message").value
-        self._timer_period = self.get_parameter("timer_period").value
+        self._timer_period = self.get_parameter("timer_period").get_parameter_value().double_value
 
         self._publisher = self.create_publisher(String, "my_topic", 10)
         self._timer = self.create_timer(self._timer_period, self._timer_callback)

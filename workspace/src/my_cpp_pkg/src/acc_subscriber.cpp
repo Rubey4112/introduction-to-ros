@@ -25,7 +25,7 @@ private:
 
   void listener_callback(const my_interfaces::msg::Accelerometer& msg)
   {
-    RCLCPP_INFO(this->get_logger(), "Accelerometer: x=%.2f, y=%.2f, z=%.2f", msg.x, msg.y, msg.z);
+    RCLCPP_INFO(this->get_logger(), "Accelerometer: x=%.2lf, y=%.2lf, z=%.2lf", msg.x, msg.y, msg.z);
   }
 
 };

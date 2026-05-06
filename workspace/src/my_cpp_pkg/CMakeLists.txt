@@ -47,6 +47,9 @@ ament_target_dependencies(acc_subscriber rclcpp my_interfaces)
 add_executable(trigger_points_client src/trigger_points_client.cpp)
 ament_target_dependencies(trigger_points_client rclcpp my_interfaces geometry_msgs)
 
+add_executable(publisher_with_params src/publisher_with_params.cpp)
+ament_target_dependencies(publisher_with_params rclcpp example_interfaces)
+
 # Install the binaries to specific folder
 install(TARGETS 
   minimal_publisher
@@ -56,6 +59,7 @@ install(TARGETS
   acc_publisher
   acc_subscriber
   trigger_points_client
+  publisher_with_params
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
