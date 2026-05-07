@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="my_cpp_pkg" exec="publisher_with_params" />
+    <node pkg="my_py_pkg" exec="minimal_subscriber" />
+</launch>
