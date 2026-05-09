@@ -49,13 +49,15 @@ Open a browser and navigate to http://localhost:3000/.
 
 #### Option 2: VS Code SSH
 
-If you want to develop Zephyr applications using your local instance of VS Code, you can connect to the running container using SSH. This will allow you to use your custom themes, extensions, settings, etc.
+If you want to develop ROS applications using your local instance of VS Code, you can connect to the running container using SSH. This will allow you to use your custom themes, extensions, settings, etc.
 
 In your local VS Code, install the [Remote - SSH extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
 
-Open the extension in VS Code and create a new connection: **root@localhost:22002**.
+Open the extension in VS Code and create a new connection: **abc@localhost:22002**.
 
-Connect and login using the password in the Dockerfile (default: `fota`). Go to **File > Open Workspace from File..** and select the **/esp-idf.code-workspace** file when prompted. Enter the password again if requested. This should configure your VS Code workspace with the */workspace* directory mapped from the host directory alongside the required toolchain directories (e.g. */opt/toolchains/esp-idf*).
+Connect and login using the password in the Dockerfile (default: `abc`). Go to **File > Open Workspace from File..** and select the **/ros2.code-workspace** file when prompted. Enter the password again if requested. This should configure your VS Code workspace with the *workspace/* directory mapped from the host directory.
+
+> **Important!** While you can run many of the demo apps found in the video series, note that you will not have access to the GUI elements, like `rqt`.
 
 ## License
 

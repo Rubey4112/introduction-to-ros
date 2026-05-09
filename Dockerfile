@@ -70,6 +70,15 @@ RUN mkdir -p /config/workspaces && \
 RUN mkdir -p /var/run/sshd && \
     chmod 0755 /var/run/sshd
 
+# Allow for SSH login
+RUN mkdir -p /var/run/sshd && \
+    chmod 0755 /var/run/sshd && \
+    sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
+    sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+# Set default password
+RUN echo "${DEFAULT_USERNAME}:${DEFAULT_PASSWORD}" | chpasswd
+
 #-------------------------------------------------------------------------------
 # ROS 2
 
@@ -170,6 +179,9 @@ RUN chown ${DEFAULT_USERNAME}:${DEFAULT_USERNAME} /config/Desktop/vscode-ros2.de
 
 #-------------------------------------------------------------------------------
 # Entrypoint
+
+# Expose internal port for SSH
+EXPOSE 22
 
 # Custom entrypoint
 COPY .scripts/entrypoint.sh /entrypoint.sh
