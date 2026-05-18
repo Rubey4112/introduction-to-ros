@@ -30,7 +30,8 @@ setup(
             "minimal_client = my_py_pkg.minimal_client:main",
             "acc_publisher = my_py_pkg.acc_publisher:main",
             "trigger_points_server = my_py_pkg.trigger_points_server:main",
-            "publisher_with_params = my_py_pkg.publisher_with_params:main"
+            "publisher_with_params = my_py_pkg.publisher_with_params:main",
+            "tf_turtle_broadcaster = my_py_pkg.tf_turtle_broadcaster:main",
         ],
     },
 )

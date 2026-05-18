@@ -11,6 +11,8 @@
   <depend>example_interfaces</depend>
   <depend>my_interfaces</depend>
   <depend>geometry_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>turtlesim</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
