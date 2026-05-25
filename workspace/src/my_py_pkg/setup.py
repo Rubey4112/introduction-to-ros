@@ -31,7 +31,8 @@ setup(
             "acc_publisher = my_py_pkg.acc_publisher:main",
             "trigger_points_server = my_py_pkg.trigger_points_server:main",
             "publisher_with_params = my_py_pkg.publisher_with_params:main",
-            "tf_turtle_broadcaster = my_py_pkg.tf_turtle_broadcaster:main",
+            "tf2_turtle_broadcaster = my_py_pkg.tf2_turtle_broadcaster:main",
+            "tf2_turtle_listener = my_py_pkg.tf2_turtle_listener:main",
         ],
     },
 )
