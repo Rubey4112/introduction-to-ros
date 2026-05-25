@@ -3,5 +3,6 @@
         "/opt/ros/jazzy/lib/python3.12/site-packages",
         "${workspaceFolder}/install/my_interfaces/lib/python3.12/site-packages",
         "${workspaceFolder}/install/my_py_pkg/lib/python3.12/site-packages",
+        "${workspaceFolder}/install/turtle_train_pkg/lib/python3.12/site-packages",
     ]
 }
