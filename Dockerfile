@@ -101,7 +101,9 @@ RUN apt-get -y update && \
         ros-${ROS_DISTRO}-desktop
 
 # Source ROS 2 environment
-RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
+RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc && \
+    echo "cd /config/workspace" >> ~/.bashrc && \
+    echo "source ~/.bashrc" >> ~/.bash_profile
 
 # Clean up stale packages
 RUN apt-get clean -y && \
